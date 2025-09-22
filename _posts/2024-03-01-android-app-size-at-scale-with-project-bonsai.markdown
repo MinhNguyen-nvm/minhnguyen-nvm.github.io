@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "Android App Size at Scale with Project Bonsai"
-date: 2024-03-01
-author: Nguyen Van Minh
-categories: [engineering, android, mobile]
-tags: [app-size, optimization, android, mobile-development, performance]
+title: Android App Size at Scale with Project Bonsai
+date: 2024-03-01 10:00:00 +0800
+categories: [Engineering, Android]
+tags: [app-size, optimization, android, mobile-development, performance, grab]
+pin: false
+math: false
+mermaid: false
 ---
 
 *Originally published on [Grab Engineering Blog](https://engineering.grab.com/project-bonsai)*

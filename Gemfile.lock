@@ -24,7 +24,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     colorator (1.1.0)
-    commonmarker (0.23.11)
+    commonmarker (0.23.12)
     concurrent-ruby (1.3.5)
     connection_pool (2.5.4)
     csv (3.3.5)
@@ -129,6 +129,8 @@ GEM
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
       webrick (>= 1.0)
+    jekyll-archives (2.3.0)
+      jekyll (>= 3.6, < 5.0)
     jekyll-avatar (0.8.0)
       jekyll (>= 3.0, < 5.0)
     jekyll-coffeescript (1.2.2)
@@ -242,21 +244,21 @@ GEM
     minitest (5.25.5)
     net-http (0.6.0)
       uri
-    nokogiri (1.18.9-aarch64-linux-gnu)
+    nokogiri (1.18.10-aarch64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.9-aarch64-linux-musl)
+    nokogiri (1.18.10-aarch64-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.9-arm-linux-gnu)
+    nokogiri (1.18.10-arm-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.9-arm-linux-musl)
+    nokogiri (1.18.10-arm-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.9-arm64-darwin)
+    nokogiri (1.18.10-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.9-x86_64-darwin)
+    nokogiri (1.18.10-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.9-x86_64-linux-gnu)
+    nokogiri (1.18.10-x86_64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.9-x86_64-linux-musl)
+    nokogiri (1.18.10-x86_64-linux-musl)
       racc (~> 1.4)
     octokit (4.25.1)
       faraday (>= 1, < 3)
@@ -305,8 +307,12 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   http_parser.rb (~> 0.6.0)
+  jekyll-archives
   jekyll-feed (~> 0.12)
-  minima (~> 2.5)
+  jekyll-paginate
+  jekyll-remote-theme
+  jekyll-seo-tag
+  jekyll-sitemap
   tzinfo (>= 1, < 3)
   tzinfo-data
   wdm (~> 0.1)

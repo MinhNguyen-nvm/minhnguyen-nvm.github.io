@@ -1,42 +1,118 @@
-# Welcome to Jekyll!
+# The Site Configuration
+
+# Import the theme
+remote_theme: cotes2020/jekyll-theme-chirpy
+
+# The language of the webpage → http://www.lingoes.net/en/translator/langcode.htm
+# If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
+# otherwise, the layout language will use the default value of 'en'.
+lang: en
+
+# Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
+timezone: Asia/Singapore
+
+# jekyll-paginate configuration → https://github.com/sverrirs/jekyll-paginate-v2
+paginate: 10
+
+# The base URL of your site
+url: "https://minhnguyen-nvm.github.io"
+
+github:
+  username: MinhNguyen-nvm
+
+twitter:
+  username: MinhDev88
+
+linkedin:
+  username: minhnguyenvan
+
+social:
+  # Change to your full name.
+  # It will be displayed as the default author of the posts and the copyright owner in the Footer
+  name: Minh Nguyen Van
+  email: minhnguyen.gtvt@gmail.com # change to your email address
+  links:
+    # The first element serves as the copyright owner's link
+    - https://github.com/MinhNguyen-nvm
+    - https://twitter.com/MinhDev88
+    - https://www.linkedin.com/in/minhnguyenvan
+
+
+# Site Author
+author:
+  name: Minh Nguyen Van
+  email: minhnguyen.gtvt@gmail.com
+  links:
+    - https://twitter.com/MinhDev88
+    - https://github.com/MinhNguyen-nvm
+    - https://www.linkedin.com/in/minhnguyenvan
+
+# The CDN endpoint for images.
+# Notice that once it is assigned, the CDN url
+# will be added to all image (site avatar & posts' images) paths starting with '/'
 #
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# e.g. 'https://cdn.com'
+img_cdn:
+
+# the avatar on sidebar, support local or CORS resources
+avatar: "/assets/images/avatar/avatar.png"
+
+# The end of `jekyll-seo-tag` settings
 
 title: Minh Nguyen Android Engineer
-email: minhnguyen.gtvt@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://minhnguyen-nvm.github.io" # the base hostname & protocol for your site
-twitter_username: MinhDev88
-github_username:  MinhNguyen-nvm
+
+tagline: Lead Android Engineer with 12+ years of expertise in high-scale mobile applications. Expert in Android development, build systems, and CI/CD optimization.
+
+description: >- # used by seo meta and the atom feed
+  Lead Android Engineer at Grab with 12+ years of experience in mobile development.
+  Sharing insights on Android development, app optimization, and engineering leadership.
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-remote-theme
+
+# Syntax highlighting
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+
+# Disable HTML compression to preserve code formatting
+compress_html:
+  clippings: []
+  comments: []
+  endings: []
+  ignore:
+    envs: []
+  blanklines: true
+  profile: false
+  startings: []
 
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - CHANGELOG.md
+  - LICENSE
+  - rollup.config.js
+  - package*.json
 # the internal "default list".
 #
 # Excluded items can be processed by explicitly listing the directories or
