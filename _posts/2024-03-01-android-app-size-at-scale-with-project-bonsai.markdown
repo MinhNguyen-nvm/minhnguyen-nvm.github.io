@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "Android App Size at Scale with Project Bonsai"
 date: 2024-03-01 10:00:00 +0800
 categories: [Engineering, Android]

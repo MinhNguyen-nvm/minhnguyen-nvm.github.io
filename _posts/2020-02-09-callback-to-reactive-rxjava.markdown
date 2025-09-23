@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "It's 2020, I still write a topic about converting Android callback API to RxJava stream"
 date: 2020-02-09
 author: "Minh Nguyen"
