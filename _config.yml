@@ -89,16 +89,16 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-# Disable HTML compression to preserve code formatting
+# Optimize HTML compression for performance while preserving code formatting
 compress_html:
-  clippings: []
-  comments: []
-  endings: []
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
   ignore:
-    envs: []
-  blanklines: true
+    envs: [development]
+  blanklines: false
   profile: false
-  startings: []
+  startings: [html, head, body]
 
 # Minimal Mistakes theme settings
 minimal_mistakes_skin: "default"

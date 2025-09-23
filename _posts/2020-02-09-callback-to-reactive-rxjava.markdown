@@ -20,7 +20,7 @@ sidebar:
 ---
 
 
-![RxJava Android Callback Conversion](/assets/images/2020-02-09-callback-to-reactive-rxjava/rxjava-callback-main.png)
+![RxJava Android Callback Conversion](/assets/images/2020-02-09-callback-to-reactive-rxjava/rxjava-callback-main.png){: loading="lazy"}
 
 *Originally published on [Medium](https://medium.com/@mikenguyenvan/it-is-2020-i-still-write-a-topic-about-converting-android-callback-api-to-rxjava-stream-976874ebc4f0)*
 
