@@ -1,14 +1,25 @@
 ---
-layout: post
+layout: single
 title: "It's 2020, I still write a topic about converting Android callback API to RxJava stream"
 date: 2020-02-09
 author: "Minh Nguyen"
 categories: [Android, RxJava, Programming]
 tags: [rxjava, android, reactive-programming, callbacks, kotlin, location-services]
-image: "/assets/images/2020-02-09-callback-to-reactive-rxjava/rxjava-callback-main.png"
+header:
+  teaser: "/assets/images/2020-02-09-callback-to-reactive-rxjava/rxjava-callback-main.png"
+excerpt: "Converting Android callback APIs to RxJava streams using Observable.create() - best practices and common pitfalls to avoid"
+author_profile: false
+read_time: true
+comments: true
+share: true
+related: true
+toc: false
+sidebar:
+  nav: "posts"
 ---
 
-{% include code-format-fix.html %}
+
+![RxJava Android Callback Conversion](/assets/images/2020-02-09-callback-to-reactive-rxjava/rxjava-callback-main.png)
 
 *Originally published on [Medium](https://medium.com/@mikenguyenvan/it-is-2020-i-still-write-a-topic-about-converting-android-callback-api-to-rxjava-stream-976874ebc4f0)*
 

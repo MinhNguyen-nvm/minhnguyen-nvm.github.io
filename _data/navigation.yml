@@ -1,0 +1,17 @@
+posts:
+  - title: "Recent Posts"
+    children:
+      - title: "Android App Size at Scale with Project Bonsai"
+        url: "/engineering/android/android-app-size-at-scale-with-project-bonsai/"
+      - title: "Converting Android callback API to RxJava stream"
+        url: "/android/rxjava/programming/callback-to-reactive-rxjava/"
+
+main:
+  - title: "Posts"
+    url: /
+  - title: "Categories"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
+  - title: "About"
+    url: /about/

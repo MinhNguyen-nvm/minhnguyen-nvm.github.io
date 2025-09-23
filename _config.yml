@@ -1,7 +1,7 @@
 # The Site Configuration
 
-# Import the theme
-remote_theme: cotes2020/jekyll-theme-chirpy
+# Import the theme  
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
 
 # The language of the webpage → http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
@@ -29,7 +29,7 @@ linkedin:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Minh Nguyen Van
+  name: Minh Nguyen
   email: minhnguyen.gtvt@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
@@ -59,7 +59,7 @@ avatar: "/assets/images/avatar/avatar.png"
 
 # The end of `jekyll-seo-tag` settings
 
-title: Minh Nguyen Android Engineer
+title: Mobile Engineering Blog
 
 tagline: Lead Android Engineer with 12+ years of expertise in high-scale mobile applications. Expert in Android development, build systems, and CI/CD optimization.
 
@@ -73,20 +73,21 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
-  - jekyll-archives
+  - jekyll-include-cache
   - jekyll-remote-theme
 
 # Syntax highlighting
 highlighter: rouge
 markdown: kramdown
 kramdown:
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    css_class: 'highlight'
-    span:
-      line_numbers: false
-    block:
-      line_numbers: false
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
 # Disable HTML compression to preserve code formatting
 compress_html:
@@ -98,6 +99,91 @@ compress_html:
   blanklines: true
   profile: false
   startings: []
+
+# Minimal Mistakes theme settings
+minimal_mistakes_skin: "default"
+
+# Site Author
+author:
+  name: "Minh Nguyen"
+  avatar: "/assets/images/avatar/avatar.png"
+  bio: "Lead Android Engineer with 12+ years of expertise in high-scale mobile applications"
+  location: "Singapore"
+  email: "minhnguyen.gtvt@gmail.com"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/MinhNguyen-nvm"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/minhnguyenvan"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/MinhDev88"
+
+# Site Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/MinhNguyen-nvm"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/minhnguyenvan"
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+  
+# Exclude from processing
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - README
+  - tmp
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 5
+paginate_path: /page:num/
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      toc: false
+      sidebar:
+        nav: "posts"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

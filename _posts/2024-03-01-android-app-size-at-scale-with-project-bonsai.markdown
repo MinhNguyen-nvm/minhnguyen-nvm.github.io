@@ -1,12 +1,18 @@
 ---
-layout: post
-title: Android App Size at Scale with Project Bonsai
+layout: single
+title: "Android App Size at Scale with Project Bonsai"
 date: 2024-03-01 10:00:00 +0800
 categories: [Engineering, Android]
 tags: [app-size, optimization, android, mobile-development, performance, grab]
-pin: false
-math: false
-mermaid: false
+excerpt: "How we built Project Bonsai to monitor and optimize Android app size at scale, reducing our APK size by 30% while maintaining feature parity."
+author_profile: false
+read_time: true
+comments: true
+share: true
+related: true
+toc: false
+sidebar:
+  nav: "posts"
 ---
 
 *Originally published on [Grab Engineering Blog](https://engineering.grab.com/project-bonsai)*
