@@ -169,6 +169,14 @@ permalink: /:categories/:title/
 paginate: 5
 paginate_path: /page:num/
 
+# Comments
+comments:
+  provider: "utterances"
+  utterances:
+    theme: "github-light"
+    issue_term: "pathname"
+    repo: "MinhNguyen-nvm/minhnguyen-nvm.github.io"
+
 # Defaults
 defaults:
   # _posts
