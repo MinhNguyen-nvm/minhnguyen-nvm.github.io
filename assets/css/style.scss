@@ -9,6 +9,19 @@ img {
   height: auto;
 }
 
+/* Perfect circular avatar */
+.author__avatar img,
+.sidebar .author__avatar img {
+  border-radius: 50% !important;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* Rounded favicon style (for some browsers) */
+link[rel="icon"] {
+  border-radius: 20%;
+}
+
 /* Simplified code formatting */
 .highlight pre,
 .highlight code {

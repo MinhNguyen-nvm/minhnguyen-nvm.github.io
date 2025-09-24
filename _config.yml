@@ -135,7 +135,6 @@ footer:
 include:
   - .htaccess
   - _pages
-  - _tabs
   
 # Exclude from processing
 exclude:

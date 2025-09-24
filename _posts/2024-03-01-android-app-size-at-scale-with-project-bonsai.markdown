@@ -83,7 +83,7 @@ In every optimisation endeavour, we adhere to a crucial principle: "MEASURE" - t
 
 In the third quarter of 2021, our team initiated an investigation into existing tools provided by both Google and the broader community. The intention was to employ tools such as [APK Analyzer](https://developer.android.com/tools/apkanalyzer) or Android Studio to conduct a thorough analysis of the app binary. However, it soon became evident that these tools were not well-suited to accommodate the extensive scope of our project.
 
-In order to accommodate our discovery, we developed a custom analytics tool called App Sizer. This tool is specifically designed to analyse app binaries from bundle files. Our primary goal was to construct a solution that adheres effectively to our unique needs.
+In order to accommodate our discovery, we developed a custom analytics tool called [App Sizer](https://github.com/grab/app-sizer). This tool is specifically designed to analyse app binaries from bundle files. Our primary goal was to construct a solution that adheres effectively to our unique needs.
 
 The tool was seamlessly integrated into Grab's CI system and sends data to a [Grafana](https://grafana.com/) instance. As a result, the tool collates and transmits daily analytics data from the release candidate branch. It offers the following key functionalities and monitors important aspects such as:
 
@@ -119,7 +119,7 @@ The tool was seamlessly integrated into Grab's CI system and sends data to a [Gr
 
 It's important to note that all the size values presented within these dashboards specifically pertain to the download size, representing the contribution of each item to the overall app download size.
 
-As part of our commitment to the developer community, we plan to open-source this tool in the near future, allowing others to benefit from its capabilities as well.
+As part of our commitment to the developer community, we have open-sourced this tool at [github.com/grab/app-sizer](https://github.com/grab/app-sizer), allowing others to benefit from its capabilities as well.
 
 ### Reduce
 

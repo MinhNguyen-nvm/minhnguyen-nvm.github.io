@@ -17,3 +17,6 @@ Thumbs.db
 # Temporary files
 *~
 *.tmp
+
+# Project documentation and prompts
+prompt/
