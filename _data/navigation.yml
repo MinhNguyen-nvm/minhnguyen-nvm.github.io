@@ -5,6 +5,8 @@ posts:
         url: "/engineering/android/android-app-size-at-scale-with-project-bonsai/"
       - title: "Converting Android callback API to RxJava stream"
         url: "/android/rxjava/programming/callback-to-reactive-rxjava/"
+      - title: "How Modularization Speeds Up Your Team - DroidCon Talk"
+        url: "/engineering/android/how-modularization-speeds-up-your-team/"
 
 main:
   - title: "About"
