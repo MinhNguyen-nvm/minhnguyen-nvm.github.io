@@ -1,9 +1,22 @@
 ---
-layout: post
+layout: single
+classes: wide
 title: "How Modularization Speeds Up Your Team"
 date: 2018-05-04
+author: "Minh Nguyen"
 categories: [Android, Architecture, Modularization]
-tags: [android, gradle, build-optimization, team-productivity]
+tags: [android, gradle, build-optimization, team-productivity, modularization, droidcon]
+header:
+  teaser: "/assets/images/modularization/modularization-benefits-flow.png"
+excerpt: "Sharing Grab's experience migrating from monolithic to modularized Android architecture - presented at DroidCon Vietnam 2018"
+author_profile: false
+read_time: true
+comments: true
+share: true
+related: true
+toc: false
+sidebar:
+  nav: "posts"
 ---
 
 *This post is to bookmark my presentation at DroidCon Vietnam on May 4, 2018, where I shared Grab's experience migrating from a monolithic Android architecture to a modularized approach.*
