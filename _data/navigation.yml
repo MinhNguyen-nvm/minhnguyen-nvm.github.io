@@ -1,6 +1,8 @@
 posts:
   - title: "Recent Posts"
     children:
+      - title: "Building App Sizer: A Developer's Journey from Problem to Production Tool"
+        url: "/engineering/android/building-app-sizer-developer-journey-problem-to-production/"
       - title: "Android App Size at Scale with Project Bonsai"
         url: "/engineering/android/android-app-size-at-scale-with-project-bonsai/"
       - title: "Converting Android callback API to RxJava stream"
