@@ -62,6 +62,21 @@
     overflow: hidden;
 }
 
+/* Current/Active Page Link */
+.sidebar .current,
+.sidebar a.current {
+    font-weight: 700 !important;
+    color: #2980b9 !important;
+    background: #e3f2fd !important;
+    border-color: #3498db !important;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2) !important;
+}
+
+.sidebar .current:before,
+.sidebar a.current:before {
+    transform: scaleY(1);
+}
+
 .sidebar a:before {
     content: "";
     position: absolute;
@@ -134,6 +149,13 @@
     .sidebar a:hover {
         color: #3498db !important;
         background: #2c3e50 !important;
+        border-color: #3498db !important;
+    }
+    
+    .sidebar .current,
+    .sidebar a.current {
+        color: #3498db !important;
+        background: #1a252f !important;
         border-color: #3498db !important;
     }
 }
