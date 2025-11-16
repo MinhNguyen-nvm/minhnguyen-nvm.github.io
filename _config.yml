@@ -103,6 +103,9 @@ compress_html:
 # Minimal Mistakes theme settings
 minimal_mistakes_skin: "default"
 
+# Google Analytics
+google_analytics: "G-MJ1T0PXWMX"
+
 # Site Author
 author:
   name: "Minh Nguyen"
