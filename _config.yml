@@ -103,8 +103,12 @@ compress_html:
 # Minimal Mistakes theme settings
 minimal_mistakes_skin: "default"
 
-# Google Analytics
-google_analytics: "G-MJ1T0PXWMX"
+# Analytics
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-MJ1T0PXWMX"
+    anonymize_ip: false
 
 # Site Author
 author:
