@@ -1,0 +1,69 @@
+.github-likes {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e1e4e8;
+}
+
+.like-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #ffffff;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #24292f;
+    transition: all 0.2s ease;
+}
+
+.like-btn:hover {
+    background: #f3f4f6;
+    border-color: #d0d7de;
+}
+
+.like-btn.liked {
+    background: #fff5f5;
+    border-color: #ef4444;
+    color: #dc2626;
+}
+
+.like-btn.liked .heart-icon {
+    fill: #ef4444;
+}
+
+.heart-icon {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: fill 0.2s ease;
+}
+
+.like-btn.liked .heart-icon {
+    fill: #ef4444;
+    stroke: #ef4444;
+}
+
+.like-count {
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .github-likes {
+        margin: 15px 0;
+        padding: 12px;
+    }
+    
+    .like-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
