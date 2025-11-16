@@ -22,7 +22,7 @@ sidebar:
 
 ## Introduction
 
-In my [previous blog post](https://minhnguyen-nvm.github.io/engineering/android/android-app-size-at-scale-with-project-bonsai/), I shared how our team at Grab tackled Android app size optimization at scale, achieving a 26% reduction in our app download size. The centerpiece of that journey was **[App Sizer](https://github.com/grab/app-sizer)** - an open-source tool that provides detailed insights into APK composition and helps developers identify size reduction opportunities.
+In my [other blog post](https://minhnguyen-nvm.github.io/engineering/android/android-app-size-at-scale-with-project-bonsai/), I shared how our team at Grab tackled Android app size optimization at scale, achieving a 26% reduction in our app download size. The centerpiece of that journey was **[App Sizer](https://github.com/grab/app-sizer)** - an open-source tool that provides detailed insights into APK composition and helps developers identify size reduction opportunities.
 
 **App Sizer is now open source and available on GitHub: [github.com/grab/app-sizer](https://github.com/grab/app-sizer)**
 
@@ -128,7 +128,7 @@ With the right components identified and a clear architectural vision, it was ti
 The insight was to create a **mapping tool** that connects APK components to their source modules:
 
 ```
-APK Components + Module Artifacts + Project Metadata = Detailed Size Attribution
+APK Components + Module/library Binaries + Project Metadata = Detailed Size Attribution
 ```
 
 I structured the core engine around three main stages, each with clear responsibilities:
