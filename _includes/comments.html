@@ -1,0 +1,31 @@
+<div class="page__comments">
+  {% capture comments_label %}{{ site.data.ui-text[site.locale].comments_label | default: "Comments" }}{% endcapture %}
+  {% if site.comments.provider and page.comments %}
+    <h4 class="page__comments-title">{{ comments_label }}</h4>
+    <section id="utterances-comments"></section>
+  {% endif %}
+</div>
+
+{% if site.comments.provider == "utterances" and page.comments %}
+<script>
+  'use strict';
+
+  (function() {
+    var commentContainer = document.querySelector('#utterances-comments');
+
+    if (!commentContainer) {
+      return;
+    }
+
+    var script = document.createElement('script');
+    script.setAttribute('src', 'https://utteranc.es/client.js');
+    script.setAttribute('repo', '{{ site.comments.utterances.repo }}');
+    script.setAttribute('issue-term', '{{ site.comments.utterances.issue_term }}');
+    script.setAttribute('label', '{{ site.comments.utterances.label | default: "comment" }}');
+    script.setAttribute('theme', '{{ site.comments.utterances.theme | default: "github-light" }}');
+    script.setAttribute('crossorigin', 'anonymous');
+
+    commentContainer.appendChild(script);
+  })();
+</script>
+{% endif %}
