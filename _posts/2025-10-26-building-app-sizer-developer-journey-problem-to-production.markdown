@@ -61,7 +61,7 @@ In practice, it turned out to be significantly more complex than expected.
 Like many developers, I started with overconfidence. "APK files are just ZIP archives, right? I'll just parse them myself!"
 
 
-This approach quickly revealed its limitations:
+This approach quickly revealed its challenges:
 - **DEX files** required special handling for class-level analysis
 - **R8/ProGuard mapping** added another layer of complexity
 
@@ -107,7 +107,6 @@ The [APK Analyzer](https://developer.android.com/studio/debug/apk-analyzer) in A
 - Raw file sizes vs. download sizes
 - Class-level analysis
 - R8 mapping support
-- Detailed resource breakdown
 
 And the best part? **Android Studio is open source**
 
@@ -215,7 +214,7 @@ I implemented specialized mappers for each component type, each handling unique 
 - Normalizes path differences between APK (`/lib/armeabi-v7a/`) and AAR (`/jni/armeabi-v7a/`)
 - Maps .so files to their source modules
 
-Each mapper returns unmatched components as "no owner" data, which gets attributed to the app module as a fallback.
+Each mapper returns unmatched components as "no owner" data, **which gets attributed to the app module as a fallback.**
 
 #### Stage 3: Analysis (`analyzer/` package)
 The final stage transforms mapped data into actionable reports. Each analyzer focuses on a specific aspect of the size analysis:
@@ -383,20 +382,14 @@ The core analysis engine remained unchanged - exactly as planned.
 ### Benefits of This Architecture
 
 1. **Avoid Code Duplication**: All parsing, mapping, and analysis logic exists once in the core module
-2. **Rapid Development**: The Gradle plugin took much less time to build than the original CLI
-3. **Native Experience**: Each interface feels natural to its users
-    - CLI users get YAML configuration and command-line options
-    - Gradle users get a DSL that integrates with their build scripts
-4. **Easy Testing**: Core logic can be tested independently of interface concerns
-5. **Future-Proof**: Adding new interfaces (Maven plugin, IDE extension, etc.) requires no changes to the core engine
-
-This architectural decision was crucial for adoption - teams could choose the integration method that fit their existing workflows rather than being forced to adapt to my tool. More importantly, it showed that **good abstractions don't just enable code reuse** - they enable **rapid iteration** on user experience.
+2. **Easy Testing**: Core logic can be tested independently of interface concerns
+3. **Future-Proof**: Adding new interfaces (Maven plugin, IDE extension, etc.) requires no changes to the core engine
 
 ## Areas for Improvement
 
 While App Sizer has proven valuable in production, there are several areas where it could be enhanced:
 
-**Performance Optimization**: Currently, the analysis runs sequentially through parsing, mapping, and analysis stages. The parsing and analysis stages could be parallelized since they operate on independent data.
+**Performance Optimization**: Currently, multiple parts of the process can run in parallel, such as parsing independent files or running different types of analysis concurrently. But this hasn't been implemented yet.
 
 **Known Limitations**: Like any tool, App Sizer has constraints and edge cases. We maintain a comprehensive list of [known limitations](https://github.com/grab/app-sizer/blob/master/LIMITATIONS.md) in our documentation, covering scenarios where the analysis might not be entirely accurate or complete.
 
@@ -410,14 +403,9 @@ These improvements represent natural evolution points for the tool, and contribu
 Building [App Sizer](https://github.com/grab/app-sizer) taught me that sometimes the best engineering solutions come from **smart composition rather than starting from scratch**. By leveraging Android Studio's battle-tested parsing logic and focusing on the unique challenge of attribution mapping, I was able to create a tool that provides insights no other solution offered in 2021.
 
 ### Real-World Impact
-Today, both of Grab's major mobile projects use [App Sizer](https://github.com/grab/app-sizer):
+Three mobile projects in my company have adopted App Sizer. Two via the CLI and one via the Gradle plugin. This validates the interface abstraction strategy: the same core engine serves different workflows through flexible integration options.
 
-- **Grab consumer app** uses the CLI version, integrating seamlessly with our existing build pipeline
-- **Grab Driver app (DAX)** uses the Gradle plugin, taking advantage of the native Android project integration and CI/CD pipeline automation
-
-This dual adoption validates the interface abstraction strategy - the same core analysis engine serves both use cases perfectly, with each team using the interface that fits their workflow.
-
-Since open-sourcing the project, the response has been encouraging. With **204 stars on GitHub** and growing adoption across the Android community, I hope [App Sizer](https://github.com/grab/app-sizer) is helping teams beyond Grab optimize their app sizes and understand their build composition.
+Since open-sourcing the project last year, the response has been encouraging. With **~200 stars on GitHub** and growing adoption across the Android community, I hope [App Sizer](https://github.com/grab/app-sizer) is helping teams beyond Grab optimize their app sizes and understand their build composition.
 
 If you're facing similar challenges with Android app size analysis, I encourage you to try [App Sizer](https://github.com/grab/app-sizer). Whether you need the CLI for custom build systems or the Gradle plugin for seamless Android integration, the tool is ready to help you understand exactly what's contributing to your app's size.
 
