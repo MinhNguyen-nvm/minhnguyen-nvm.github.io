@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://minhnguyen-nvm.github.io/sitemap.xml
+Sitemap: https://minhnguyenv.com/sitemap.xml
