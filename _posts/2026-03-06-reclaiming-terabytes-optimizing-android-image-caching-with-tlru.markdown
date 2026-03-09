@@ -14,13 +14,14 @@ related: true
 toc: false
 sidebar:
   nav: "posts"
+canonical_url: "https://engineering.grab.com/reclaiming-tetabytes-optimizing-android-image-caching-with-tlru"
 ---
 
 *Originally published on [Grab Engineering Blog](https://engineering.grab.com/reclaiming-tetabytes-optimizing-android-image-caching-with-tlru)*
 
 ## Introduction
 
-In a previous post, we discussed [Project Bonsai](/engineering/android/android-app-size-at-scale-with-project-bonsai/), our initiative to reduce the Grab app's download size. We successfully reduced the Android Application Package (APK) download size by 26%. This reduction offers a substantial advantage: it minimizes download friction, allowing users to download the app, even on slower networks. However, the battle for storage doesn't end after installation.
+In a previous post, we discussed [Project Bonsai](https://minhnguyenv.com/engineering/android/android-app-size-at-scale-with-project-bonsai/), our initiative to reduce the Grab app's download size. We successfully reduced the Android Application Package (APK) download size by 26%. This reduction offers a substantial advantage: it minimizes download friction, allowing users to download the app, even on slower networks. However, the battle for storage doesn't end after installation.
 
 The Grab app includes a wide range of features and workflows that heavily depend on image content, particularly in services like transportation and e-commerce. Although some images are packaged within the app binary, a large majority are downloaded from Grab's server at runtime. To optimize the app's performance and minimize server expenses, the downloaded images are cached in the app's storage. This reduces both load times and traffic to Grab's image server, resulting in better user experience and lower costs. Although we use Least Recently Used (LRU) cache to manage storage, many images can remain in the app storage for extended periods, even if they are no longer relevant.
 

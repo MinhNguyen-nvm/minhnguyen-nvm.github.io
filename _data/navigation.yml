@@ -1,6 +1,8 @@
 posts:
   - title: "Recent Posts"
     children:
+      - title: "Reclaiming Terabytes: Optimizing Android Image Caching with TLRU"
+        url: "/engineering/android/reclaiming-terabytes-optimizing-android-image-caching-with-tlru/"
       - title: "Building App Sizer: A Developer's Journey from Problem to Production Tool"
         url: "/engineering/android/building-app-sizer-developer-journey-problem-to-production/"
       - title: "Android App Size at Scale with Project Bonsai"
